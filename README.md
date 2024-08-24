@@ -12,7 +12,6 @@ This repository provides static Windows (x86 and x86_64) and Linux (x86_64, arm6
 [![Linux ARM64 GPL master](https://img.shields.io/badge/-Linux_ARM64-orangered.svg?style=for-the-badge&logo=linux)](https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linuxarm64-gpl.tar.xz "Linux ARM64 GPL master")
 [![Windows x64 GPL master](https://img.shields.io/badge/-Windows_x64-blue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip "Windows x64 GPL master")
 [![Windows x86 GPL master](https://img.shields.io/badge/-Windows_x86-9cf.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win32-gpl.zip "Windows x86 GPL master")
-[![Windows ARM64 GPL master](https://img.shields.io/badge/-Windows_arm64-lightblue.svg?style=for-the-badge&logo=windows)](https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-winarm64-gpl.zip "Windows ARM64 GPL master")
 [![Other variants](https://img.shields.io/badge/-Other-grey.svg?style=for-the-badge)](https://github.com/yt-dlp/FFmpeg-Builds/wiki/Latest "All variants")
 [![Other versions](https://img.shields.io/badge/-Old_Versions-lightgrey.svg?style=for-the-badge)](https://github.com/yt-dlp/FFmpeg-Builds/releases "All releases")
 
@@ -32,6 +31,10 @@ There are currently no MacOS builds. If you know how to add them to the workflow
 
 [yt-dlp#2753](https://github.com/yt-dlp/yt-dlp/issues/2753), [FFmpeg#9646](https://trac.ffmpeg.org/ticket/9646)
 
+### 3. Windows on ARM builds are disabled because of issues with `cc-rs`
+
+`cc-rs` has been [fixed upstream](https://github.com/rust-lang/cc-rs/pull/1176),
+but `rav1e` still uses [an old version](https://github.com/xiph/rav1e/issues/3393).
 
 
 ## Patches Applied
